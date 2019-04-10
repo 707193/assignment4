@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +11,8 @@ namespace assignment4
     class Program
     {
         ArrayList Beowulf;
+        private int area51;
+        private int countSpaces;
 
         static void Main(string[] args)
         {
@@ -20,7 +24,7 @@ namespace assignment4
         public void ReadTextFiles()
         {
             //Read files using StreamReader. Read file line by line 
-            using (StreamReader file = new StreamReader(c:/ area51 / Beowulf.txt))
+            using (StreamReader file = new StreamReader("c:/area51/beowulf.txt"))
             {
                 int counter = 0;
                 string ln;
@@ -41,14 +45,13 @@ namespace assignment4
         {
             //http://stackoverflow.com/questions/17812566/count-words-and-spaces-in-string-c-sharpe
             int countletters = 0;
-            int countletters = 0;
 
             foreach (char c in line)
             {
                 if (char.IsLetter(c)) { countletters++; }
                 if (char.IsWhiteSpace(c)) { countSpaces++; }
             }
-            return countSpaces
+            return countSpaces;
         }
     }
 }
