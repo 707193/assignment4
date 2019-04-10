@@ -36,7 +36,7 @@ namespace assignment4
                 }
                 file.Close();
                 Console.WriteLine($"File has {counter} lines.");
-
+                Console.ReadLine();
             }
         }
 
