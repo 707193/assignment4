@@ -22,9 +22,33 @@ namespace assignment4
             //Read files using StreamReader. Read file line by line 
             using (StreamReader file = new StreamReader(c:/ area51 / Beowulf.txt))
             {
-                int 
+                int counter = 0;
+                string ln;
+
+                while ((ln = file.ReadLine()) != null)
+                {
+                    Console.WriteLine(ln);
+                    Beowulf.Add(ln);
+                }
+                file.Close();
+                Console.WriteLine($"File has {counter} lines.");
+
             }
         }
 
+
+        public int FindNumberOfBlankSpaces(string line)
+        {
+            //http://stackoverflow.com/questions/17812566/count-words-and-spaces-in-string-c-sharpe
+            int countletters = 0;
+            int countletters = 0;
+
+            foreach (char c in line)
+            {
+                if (char.IsLetter(c)) { countletters++; }
+                if (char.IsWhiteSpace(c)) { countSpaces++; }
+            }
+            return countSpaces
+        }
     }
 }
