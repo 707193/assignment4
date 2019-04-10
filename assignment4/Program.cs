@@ -15,8 +15,16 @@ namespace assignment4
             Program p = new Program();
             p.Beowulf = new ArrayList();
         }
+        public void Run() { this.ReadTextFiles(); }
 
-    
+        public void ReadTextFiles()
+        {
+            //Read files using StreamReader. Read file line by line 
+            using (StreamReader file = new StreamReader(c:/ area51 / Beowulf.txt))
+            {
+                int 
+            }
+        }
 
     }
 }
